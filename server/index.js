@@ -20,10 +20,6 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/pages", pageRoutes);
-
 // DB
 databaseConnection();
 
@@ -31,8 +27,7 @@ app.get('/', (req, res) => {
   res.send('API is running and DB is connected!');
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
-});
-
+// Routes
+app.use("/api/auth", authRoutes);
+app.use("/api/pages", pageRoutes);
 export default app;
