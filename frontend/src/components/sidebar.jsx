@@ -192,7 +192,7 @@ const handleLogout = () => {
         ) : (
           <ul className="space-y-2">
             {filteredTrash.map((p) => (
-              <li key={p._id} className="flex justify-between text-sm">
+              <li key={p._id} className="flex justify-between cursor-pointer text-sm rounded px-3 py-2 bg-gray-200 hover:bg-gray-100">
                 <span className="truncate">{p.title}</span>
                 <div className="flex gap-2">
                   <button
