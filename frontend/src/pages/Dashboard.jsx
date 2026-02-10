@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import EditorShell from "../components/EditorShell";
+import Sidebar from "../components/sidebar";
+import EditorShell from "../components/editorShell";
 
 const Dashboard = () => {
   const [pages, setPages] = useState([]);
